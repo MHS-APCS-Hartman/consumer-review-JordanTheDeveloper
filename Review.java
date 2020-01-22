@@ -245,5 +245,76 @@ public static String fakeReview(String fileName)
 }
 
 	
+public static String fakeReview(String fileName)
+
+
+
+
+ {
+
+
+     String text = textToString(fileName);
+
+
+    
+
+
+     for(int i = 0; i < text.length(); i++)
+
+
+     {
+
+
+        if(text.charAt(i) == '*')
+
+
+        {
+
+
+           int j = i;
+
+
+           while(true)
+
+
+           {
+
+
+              i++;
+
+
+              if(text.charAt(i) == ' ')
+
+
+              {
+
+
+                 break;
+
+
+              }
+
+
+           }
+
+
+           int k = i;
+
+
+           text = text.substring(0, j) + randomAdjective() + text.substring(k);
+
+
+        }
+
+
+     }
+
+
+     return text;
+
+
+  }
+
+	
 
 }
